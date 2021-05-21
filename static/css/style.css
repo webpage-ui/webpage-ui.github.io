@@ -88,7 +88,7 @@ section header .toggle::before {
   text-transform: uppercase;
   color: white;
   letter-spacing: 2px;
-  font-size: 14px;
+  font-size: 18px;
   padding: 2px 5px;
   background: white;
   color: black;
@@ -125,6 +125,8 @@ section .social-media li {
   background: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition-delay: calc(0.2s * var(--i));
+          transition-delay: calc(0.2s * var(--i));
 }
 
 section .social-media li a {
@@ -133,7 +135,7 @@ section .social-media li a {
   display: inline-block;
   letter-spacing: 2px;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -151,7 +153,7 @@ section .content h2 {
   position: relative;
   color: white;
   font-size: 10vw;
-  line-height: 0.55em;
+  line-height: 1em;
   text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   font-family: "Orbitron", sans-serif;
 }
@@ -169,6 +171,46 @@ section .content h2 span {
   text-transform: uppercase;
 }
 
+section .navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 100;
+}
+
+section .navigation li {
+  list-style: none;
+  text-align: center;
+  margin: 15px 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  -webkit-transition-delay: calc(0.2s * var(--i));
+          transition-delay: calc(0.2s * var(--i));
+}
+
+section .navigation li a {
+  color: black;
+  font-size: 1.5em;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  background: white;
+  padding: 4px 10px;
+  display: inline-block;
+}
+
+section .navigation li a:hover {
+  background: black;
+  color: white;
+}
+
 .glass {
   position: absolute;
   top: 0;
@@ -182,8 +224,8 @@ section .content h2 span {
           box-shadow: 10px 0 15px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
 }
 
 section.active .glass {
@@ -201,5 +243,40 @@ section.active .content {
           transform: translateX(-200px);
   -webkit-transition-delay: 0s;
           transition-delay: 0s;
+}
+
+section.active .social-media li {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+}
+
+section.active .navigation li {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+@media (max-width: 991px) {
+  section header {
+    padding: 20px;
+  }
+  section .social-media {
+    bottom: 20px;
+    right: 20px;
+  }
+  section .glass {
+    width: 50%;
+  }
+  section .content h2 {
+    font-size: 14vh;
+  }
+  section .content h2 span {
+    font-size: 0.25em;
+    letter-spacing: 2px;
+    padding: 0 5px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
