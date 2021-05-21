@@ -149,19 +149,18 @@ section{
             transform: translateX(200px);
             transition-delay: calc(0.2s * var(--i));
             a{
-               color: black; 
+               color: white; 
                font-size: 1.5em;
                letter-spacing: 4px;
                text-decoration: none;
-               font-weight: 300;
+               font-weight: 900;
                text-transform: uppercase;
-               background: white;
+               background: rgba(0,0,0,0);
                padding: 4px 10px; 
                display: inline-block;
             }
             a:hover{
-                background: black;
-                color: white;
+                background: rgba(0,0,0,0.2);
             }
         }
     }
