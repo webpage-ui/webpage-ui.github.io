@@ -261,7 +261,7 @@ section.active .navigation li {
 
 @media (max-width: 991px) {
   section header {
-    padding: 20px;
+    padding: 5px;
   }
   section .social-media {
     bottom: 20px;
