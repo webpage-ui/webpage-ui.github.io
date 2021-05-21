@@ -258,6 +258,14 @@ section.active .navigation li {
           transform: translateX(0px);
 }
 
+footer {
+  background: black;
+}
+
+footer a {
+  color: grey;
+}
+
 @media (max-width: 991px) {
   section header {
     padding: 5px;

@@ -206,6 +206,12 @@ section.active{
     }
 }
 
+footer{
+    background: black;
+    a{
+        color: grey;
+    }
+}
 @media (max-width: 991px){
     section{
         header{
